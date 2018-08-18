@@ -1,0 +1,76 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+
+    <title>Modal</title>
+    <meta charset="utf-8" />
+    <link href="css/modalStyle.css" rel="stylesheet" />
+
+    <style>
+        body {
+            text-align: center;
+            padding-top: 100px;
+        }
+
+        span {
+            width: 100px;
+            background-color: #bf0000;
+            color: #fff;
+            padding: 20px 40px;
+            display: inline-block;
+            margin: 5px;
+            transition: .3s;
+            border-radius: 5px;
+        }
+
+            span:hover {
+                cursor: pointer;
+                box-shadow: 0 0 20px #000;
+                transition: .3s;
+            }
+
+        #modalBox {
+            width: 700px;
+            height: 300px;
+            background-color: #bf0000;
+            color: #ffffff;
+            font-size: 30px;
+            border-radius: 5px;
+            margin: 5px;
+            display: none;
+        }
+    </style>
+
+
+</head>
+<body>
+
+
+
+    <!-- modal bottom -->
+    <span data-modal="modal-top">Top</span><br />
+    <span data-modal="modal-left">Left</span>
+    <span data-modal="modal-fade">Fade</span>
+    <span data-modal="modal-right">Right</span><br />
+    <span data-modal="modal-bottom">Bottom</span>
+
+
+    <!-- modal box -->
+    <div id="modal-top" class="anmModal" data-entrance="top">Top</div>
+    <div id="modal-left" class="anmModal" data-entrance="left">Left</div>
+    <div id="modal-fade" class="anmModal" data-entrance="fade">Fade</div>
+    <div id="modal-right" class="anmModal" data-entrance="right">Right</div>
+    <div id="modal-bottom" class="anmModal" data-entrance="bottom">Bottom</div>
+
+
+
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/anmModal.js"></script>
+
+    <script>
+        $().anmModal();
+    </script>
+
+
+</body>
+</html>
